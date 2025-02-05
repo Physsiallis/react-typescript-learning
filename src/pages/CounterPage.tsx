@@ -7,6 +7,8 @@ const CounterPage = () => {
      * Plus d'information sur la déclaration des useState : https://www.carlrippon.com/typed-usestate-with-typescript/
      */
 
+    const [compteur, setCompteur] = useState(0);
+
 
     /**
      * TODO implémenter Fonction permettant d'incrémenter l'état du compteur.
@@ -14,6 +16,9 @@ const CounterPage = () => {
      * Utilisée en tant que "handler" d'un évènement "click".
      */
 
+    const incrementer = () => {
+        setCompteur(compteur +1);
+    }
 
     /**
      * TODO implémenter un fonction permettant d'incrémenter l'état du compteur
@@ -27,8 +32,9 @@ const CounterPage = () => {
      */
     return (
         <>
-            <h2>Compteur :</h2>
+            <h2>Compteur : {compteur}</h2>
             {/* TODO compléter le code affichant le nombre de clics et des boutons */}
+            <button onClick={incrementer}>+1</button>
         </>
     )
 }
