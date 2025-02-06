@@ -48,6 +48,10 @@ const TasksPage = () => {
                 {
                     // TODO ajouter un "map" sur le tableau de states en état afin de créer le JSX de chaque tâche
                     // Exemple d'utilisation : https://legacy.reactjs.org/docs/lists-and-keys.html#rendering-multiple-components
+
+                    tasks.map((task, index) =>
+                        <li key={index}>{task}</li>
+                    )
                 }
             </ul>
         </>

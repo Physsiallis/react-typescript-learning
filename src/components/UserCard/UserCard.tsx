@@ -13,14 +13,58 @@ export interface Coordinates {
 // TODO ajouter les interfaces manquantes
 
 export interface User {
-    // TODO compléter cette interface
+    id: number,
+    name: string,
+    username: string,
+    email: string,
+    address: Address,
+    phone: string,
+    website: string,
+    company: Company,
+
 }
 
-export const UserCard = ({ user } : { user: User }) => {
+export interface Address {
+    street: string,
+    suite: string,
+    city: string,
+    zipcode: string,
+    geo: Coordinates,
+}
+
+export interface Company {
+    name: string,
+    catchPhrase: string,
+    bs: string
+}
+export const UserCard = ({ user }: { user: User }) => {
 
     return (
-        <div className={ styles.userCard }>
-            {/* TODO compléter le code pour interface graphique */}
+        <div className={styles.userCard}>
+            {
+                <div>
+                    {
+                        <div>
+                            <div> Identifiant : {
+                                user.id
+                            }
+                            </div>
+                            <div> Nom : {
+                                user.name
+                            }
+                            </div>
+                            <div> Nom d'utilisateur : {
+                                user.username
+                            }
+                            </div>
+                            <div> Website : {
+                                user.website
+                            }
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
         </div>
     )
 }
